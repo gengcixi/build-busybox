@@ -1,5 +1,9 @@
 #!/bin/bash
 
+TOPDIR=$(cd `dirname $0`;pwd)
+echo ${TOPDIR}
+
+
 ROOTFS=rootfs-$1
 if [ -d ${ROOTFS} ];then
     rm -rf ${ROOTFS}
@@ -32,5 +36,7 @@ make unisoc_defconfig
 make 
 make install
 mv ./_install ../${ROOTFS}
+
+cd ${TOPDIR}
 
 ./config.sh $1

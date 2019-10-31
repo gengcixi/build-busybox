@@ -53,6 +53,8 @@ echo "/bin/mkdir -p /dev/shm">>etc/init.d/rcS
 echo "/sbin/mdev -s">>etc/init.d/rcS
 echo "/bin/mount -a">>etc/init.d/rcS
 echo "echo /sbin/mdev > /proc/sys/kernel/hotplug">>etc/init.d/rcS
+echo "mknod dev/console c 5 1">>etc/init.d/rcS
+echo "mknod dev/null c 1 3">>etc/init.d/rcS
 echo "mknod dev/tty0 c 4 0">>etc/init.d/rcS
 echo "mknod dev/tty1 c 4 1">>etc/init.d/rcS
 echo "mknod dev/tty2 c 4 2">>etc/init.d/rcS

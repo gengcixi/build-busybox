@@ -33,3 +33,4 @@ make
 make install
 mv ./_install ../${ROOTFS}
 
+./config.sh $1

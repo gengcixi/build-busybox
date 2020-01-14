@@ -22,7 +22,7 @@ if [ -d busybox ];then
 fi
 
 
-cd busybox-1.30.0
+cd busybox-1.30.1
 
 cp ../unisoc_defconfig configs/
 make unisoc_defconfig

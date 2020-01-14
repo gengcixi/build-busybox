@@ -21,15 +21,8 @@ if [ -d busybox ];then
     rm -rf busybox 
 fi
 
-# git clone 
 
-echo "start download busybox"
-git clone git://busybox.net/busybox.git
-#git clone https://git.busybox.net/busybox/
-echo "busybox source code download done"
-
-cd busybox
-git checkout -b local 1_29_3
+cd busybox-1.30.0
 
 cp ../unisoc_defconfig configs/
 make unisoc_defconfig
